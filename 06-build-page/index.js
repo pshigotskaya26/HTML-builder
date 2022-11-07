@@ -153,9 +153,7 @@ let dataOfTemplate = '';
 readableStreamTemplate.on('data', chunk => dataOfTemplate += chunk);
 readableStreamTemplate.on('end', () => {
 	//console.log('dataOfTemplate: ', dataOfTemplate);
-});
-
-//reading content of files in components folder and add it in project-dist/index.html
+	//reading content of files in components folder and add it in project-dist/index.html
 fsPromises.readdir(pathComponentsFolder, {withFileTypes: true})
 .then(files => {
 	files.forEach(file => {
@@ -184,3 +182,6 @@ fsPromises.readdir(pathComponentsFolder, {withFileTypes: true})
 		}
 	});	
 })
+});
+
+
