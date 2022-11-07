@@ -8,4 +8,4 @@ const readableStream = fs.createReadStream(`${pathDirname}`, 'utf-8');
 let data = '';
 
 readableStream.on('data', chunk => data += chunk);
-readableStream.on('end', () => stdout.write(data));
+readableStream.on('end', () => stdout.write(data +'\n'));
